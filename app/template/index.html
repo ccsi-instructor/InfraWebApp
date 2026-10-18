@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ファイルアップローダー</title>
+</head>
+<body>
+  <h1>ファイルアップローダー</h1>
+  <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+    <form method="post" enctype="multipart/form-data">
+      <input type="file" name="file">
+      <button type="submit">アップロード</button>
+    </form>
+    {% if not connected %}
+    <span role="alert" style="color: #b00020;">{{ warning }}</span>
+    {% endif %}
+  </div>
+</body>
+</html>

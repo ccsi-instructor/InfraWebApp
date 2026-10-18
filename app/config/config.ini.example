@@ -1,0 +1,8 @@
+[server]
+port = 80
+
+[storage]
+share = //192.168.10.20/Upload
+username = upload_user
+password = CHANGE_ME
+domain = FILESERVER
