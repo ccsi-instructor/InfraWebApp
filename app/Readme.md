@@ -372,17 +372,3 @@ firewalldが停止している場合は、`firewall-offline-cmd`で永続設定�
 
 同じ環境へ`install.sh`、`update.sh`、`uninstall.sh`を同時に実行しないでください。更新時はWebを停止するため、アップロード処理が中断される場合があります。
 
-## 10. 参照資料
-
-配布物固有のコピー範囲・設定優先順位・削除範囲の根拠は、同梱の3スクリプトです。アプリのHTTP応答・SMB判定は`app.py`と`template/index.html`を参照してください。外部機能の仕様は、以下の公式資料を参照しています。
-
-1. systemd — 実行ユーザーとケーパビリティ: https://www.freedesktop.org/software/systemd/man/latest/systemd.exec.html
-2. systemd — Wantsと依存関係: https://www.freedesktop.org/software/systemd/man/latest/systemd.unit.html
-3. GNU Coreutils — readlink / install / rmdir: https://raw.githubusercontent.com/coreutils/coreutils/master/doc/coreutils.texi
-4. Python — ConfigParser: https://docs.python.org/3.14/library/configparser.html
-5. firewalld — firewall-cmd: https://firewalld.org/documentation/man-pages/firewall-cmd.html
-6. Flask — エラー処理: https://flask.palletsprojects.com/en/stable/errorhandling/
-7. Gunicorn — systemdへの配備・設定: https://gunicorn.org/deploy/ および https://gunicorn.org/reference/settings/
-8. firewalld — firewall-offline-cmd: https://firewalld.org/documentation/man-pages/firewall-offline-cmd.html
-
-今回変更したファイルは`update.sh`と本Readmeです。`install.sh`、`uninstall.sh`、アプリ、HTML、設定例は前版から変更していません。今回の設定取り込み修正の検証方法と結果は、配布ZIP直下の`validation.txt`に記載しています。実機のAlmaLinux 9・Python 3.14・Windows Server 2025を組み合わせた統合試験の完了を表すものではありません。
